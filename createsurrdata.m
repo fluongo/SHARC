@@ -1,4 +1,14 @@
 function [M2] = createsurrdata(M, C)
+%function [M2] = createsurrdata(M, C)
+% Function that generates an activity raster (M2) using SHARC, given an input raster of activity (M) and target correlation matrix (C)
+%
+%   Inputs:
+%       M - Activity raster (nCells x timepoints)
+%       C - target correlation matrix (nCells x nCells)
+%
+%   Outputs:
+%       M2 - Activity raster representing a surrogate dataset with activity statistics of M and correlations fit to target correlations (C)
+%
 
 N = size(M);
 

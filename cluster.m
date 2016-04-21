@@ -1,5 +1,16 @@
 function [C2] = cluster(C)
+%
+% function [C2] = cluster(C)
+%        Given an input correlation matrix (C), returns the topograhically arranged 'clustered' version (C2)
+%
+%   Input:
+%       C = Mirror symmetric correlation matrix where entry i,j corresponds correlation between neurons i and j (nCells x nCells)
+%
+%   Output:
+%       C2 = Topographically clustered correlation matrix where entry i,j corresponds correlation between neurons i and j (nCells x nCells)
+%
 
+% get params
 N = size(C);
 ncells = N(1);
 
@@ -8,7 +19,7 @@ for i=1:ncells,
     for j=i+1:ncells,
         n = n+1;
         pair(n,:) = [i j];
-        distance(n) = j-i;
+        distance(n) = j-i; 
         allcorrs(n) = C(i,j);
     end
 end

@@ -28,3 +28,7 @@ function [M2] = createsurrdata(M, C)
 %   Outputs:
 %       M2 - Activity raster representing a surrogate dataset with activity statistics of M and correlations fit to target correlations (C)
 ```
+
+Accompanying publication:
+
+Luongo et al. 2016 // http://jn.physiology.org/content/115/5/2359
